@@ -1,0 +1,53 @@
+:root {
+    --blanco: #D6EFD8;
+    --oscuro: #1A5319;
+    --primario: #508D4E;
+    --secundario: #80AF81;
+    --gris: #757575;
+
+
+}
+
+html {
+    font-size: 62.5%;
+
+    .krub-bold {
+        font-family: "Krub", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+    }
+
+    .krub-regular-italic {
+        font-family: "Krub", sans-serif;
+        font-weight: 400;
+        font-style: italic;
+    }
+}
+
+body {
+    font-size: 16px;
+}
+
+
+.titulo {
+    text-align: center;
+    font-size: 3.8rem;
+    margin: 0;
+}
+
+.titulo span {
+    font-size: 2rem;
+}
+
+header {
+    background-color: var(--gris);
+
+}
+
+.barradenavegacion {
+    background-color: var(--secundario);
+}
+
+a {
+    text-decoration: none;
+}
