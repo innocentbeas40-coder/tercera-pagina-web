@@ -8,6 +8,7 @@
 
 }
 
+/* se utiliza el font size para que la escala rem sea más exacta  además se le agrega al html una fuente llamada krub  */
 html {
     font-size: 62.5%;
 
@@ -24,30 +25,188 @@ html {
     }
 }
 
+*,
+* ::before,
+*::after {
+    box-sizing: inherit;
+}
+
 body {
     font-size: 16px;
 }
 
+h1 {
 
-.titulo {
-    text-align: center;
     font-size: 3.8rem;
-    margin: 0;
 }
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+.b_n {
+    max-width: 120rem;
+    margin: 0 auto;
+
+}
+
+
 
 .titulo span {
     font-size: 2rem;
 }
 
-header {
-    background-color: var(--gris);
-
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
 }
+
 
 .barradenavegacion {
     background-color: var(--secundario);
+
+    display: flex;
+    flex-direction: column;
+    /*justify-content: space-around;
+     el espacio que tiene atras se suma al espacio que tiene adelante esto hace que el contenido del fondo sea un poco más largo que el de los costados */
+    /* justify-content: space-evenly;
+     deja la misma cantidad de espacio tanto atras como adelante  */
+    justify-content: space-between;
+    /* el espacio tando del inicio como del final es mucho más corto que el contenido que tiene entre ellos */
+    /* align-items: ; esto sirve para cuando se tiene que organizar columnas  */
 }
 
-a {
+/* estandar de mediaquerys son 480px para celulares, 
+768px para tablets,1140 para laptops y 1440px para pantallas más grandes */
+@media (min-width: 768px) {
+    .barradenavegacion {
+        flex-direction: row;
+
+
+    }
+}
+
+
+
+.b_n a {
+    color: var(--blanco);
+    padding: 1rem;
     text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+
+}
+
+a:hover {
+    background-color: var(--primario);
+    color: var(--oscuro);
+
+}
+
+/* body {
+    background-color: greenyellow;
+}
+
+/* mediaquery para celulares 
+@media (min-width: 480px) {
+    body {
+        background-color: red;
+    }
+}
+
+/* mediaquery para tablets
+@media (min-width: 768px) {
+    body {
+        background-color: blue;
+    }
+} */
+
+.hero {
+
+
+    background-image: url(../img/hero.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    height: 450px;
+
+
+
+}
+
+.contenido_hero {
+
+
+
+    position: absolute;
+    background-color: rgb(0 0 0 / 70%);
+    width: 100%;
+    height: 100%;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+
+
+
+
+
+    /* top: 0;
+right: 0;
+bottom: 0;
+left: 0; */
+}
+
+.contenido_hero h2,
+.contenido_hero p {
+    color: var(--blanco);
+
+}
+
+.ubicacion {
+    display: flex;
+    align-items: flex-end;
+}
+
+
+
+
+
+.contactar {
+
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: .5rem;
+    text-align: center;
+    width: auto;
+}
+
+@media (max-width: 768px) {
+    .contactar {
+        display: block;
+        width: 90%;
+    }
 }
